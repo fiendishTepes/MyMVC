@@ -1,0 +1,5 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /mymvc/public/
+ErrorDocument 404 "<h1>ERROR</h1>"
+RewriteRule ^ index.php [QSA,L]
