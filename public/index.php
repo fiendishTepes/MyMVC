@@ -6,6 +6,7 @@ define('MODEL', ROOT . 'app' . DIRECTORY_SEPARATOR . 'model' . DIRECTORY_SEPARAT
 define('DATA', ROOT . 'app' . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 define('CORE', ROOT . 'app' . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR);
 define('CONTROLLER', ROOT . 'app' . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR);
+define('MYWEB','http://127.0.0.1:4444/mymvc/' ); // myDomain
 $modeules = [ROOT,APP,CORE,CONTROLLER,DATA];
 set_include_path(get_include_path() . PATH_SEPARATOR . implode( PATH_SEPARATOR, $modeules));
 spl_autoload_register('spl_autoload',false); //ใช้โหลดไฟล์ที่ต้องใช้ แบบ งง 
@@ -23,10 +24,13 @@ new Application;
 <div>
     <ul>
         <li>
-            <a href="home/index">Home</a>
+            <a href="<?php echo MYWEB ?>home/index">Home</a>
         </li>
         <li>
-            <a href="home/about">Ablut</a>
+            <a href="<?php echo MYWEB ?>home/about">Ablut</a>
+        </li>
+        <li>
+            <a href="<?php echo MYWEB ?>home/contact">Contact</a>
         </li>
     </ul>
 </div>
